@@ -37,6 +37,7 @@ return (
     <p>{item.owner.login}</p>
     <p>{item.owner.id}</p>
     <p>{item.owner.avatar_url}</p>
+    <p>{item.name}</p>
   </div>
 ))}
   </main>
