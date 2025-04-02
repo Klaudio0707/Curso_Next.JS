@@ -1,11 +1,9 @@
 export default function Loading() {
     return (
-<div>
-        <div>carregando...</div>
-
-</div>
+        <div>
+            <div>carregando...</div>
+        </div>
 
     )
-
 
 }

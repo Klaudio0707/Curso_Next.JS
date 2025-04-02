@@ -1,15 +1,14 @@
 
-interface DataPropts{
+interface DataPropts {
   id: number;
   name: string;
   full_name: string;
   language: string;
-  owner:{
+  owner: {
     login: string;
     id: number;
     avatar_url: string;
   }
-
 
 }
 
@@ -21,26 +20,26 @@ async function getData() {
 }
 
 export default async function Home() {
-const data: DataPropts[] = await getData();
+  const data: DataPropts[] = await getData();
 
 
-return (
-  <main>
-    <h1>Home</h1>
-  <p>Sejá bem vindo a pagina home</p>
-<br/>
-<h3>Meus repositorios</h3>
-{data.map((item) => (
-  <div key={item.id}>
-    <strong><p>Repositorio: {item.full_name}</p></strong>
-    <p>{item.language}</p>
-    <p>{item.owner.login}</p>
-    <p>{item.owner.id}</p>
-    <p>{item.owner.avatar_url}</p>
-    <p>{item.name}</p>
-  </div>
-))}
-  </main>
+  return (
+    <main>
+      <h1>Home</h1>
+      <p>Sejá bem vindo a pagina home</p>
+      <br />
+      <h3>Meus repositorios</h3>
+      {data.map((item) => (
+        <div key={item.id}>
+          <strong><p>Repositorio: {item.full_name}</p></strong>
+          <p>{item.language}</p>
+          <p>{item.owner.login}</p>
+          <p>{item.owner.id}</p>
+          <p>{item.owner.avatar_url}</p>
+          <p>{item.name}</p>
+        </div>
+      ))}
+    </main>
 
-)
+  )
 }
